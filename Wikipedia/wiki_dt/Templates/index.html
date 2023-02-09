@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wiki_Dt</title>
+</head>
+<body>
+	<h1>Hello Wikipedia</h1>
+	<form action = "" method="POST">
+		{% csrf_token %}
+		<input type="text" name="text_input" placeholder="Query Here">
+		<input type="number" name="number_input">
+		<h3>
+			{% if result %}
+				{{result}}
+			{% else %}
+				Nothing to get
+			{% endif %}
+		</h3>
+		<input type="submit" name="">
+	</form>
+</body>
+</html>
